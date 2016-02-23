@@ -10,7 +10,7 @@ end
 
 def display_card_total(card_total)
   # code #display_card_total here
-  "Your cards add up to #{card_total}"
+  puts "Your cards add up to #{card_total}"
 end
 
 def prompt_user
@@ -32,15 +32,25 @@ def initial_round
   # code #initial_round here
   deal_card
   deal_card
-  display_card_total(deal_card + deal_card)
+  display_card_total (deal_card + deal_card)
+  return deal_card + deal_card
 end
 
-def hit?
+def hit? (card_total)
   # code hit? here
+  prompt_user
+  get_user_input
+  card_total
+  deal_card
+  card_total
+
+
 end
 
 def invalid_command
   # code invalid_command here
+  puts "Please enter a valid command"
+  prompt_user
 end
 
 #####################################################
